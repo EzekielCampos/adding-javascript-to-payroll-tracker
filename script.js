@@ -65,7 +65,7 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 
-  // This variable will hold a random employee
+  // This variable will hold a random employee information by using the Math methods
   const randomEmployee = employeesArray[Math.round(Math.random()*(employeesArray.length -1))];
   console.log(`Employee: ${randomEmployee.firstName} ${randomEmployee.lastName}
   Salary: ${randomEmployee.salary}`);
