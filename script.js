@@ -26,7 +26,7 @@ const collectEmployees = function() {
     const addLastName = prompt("Enter Last Name");
 
     const addSalary = prompt("Enter your salary");
-    // Converts addSalary to a number with operator '+' because prompts return string values
+    // Checks to see if a number was inputted, if not default be set to zero
     if(isNaN(addSalary)){
       addSalary = 0;
     }
@@ -50,10 +50,9 @@ const displayAverageSalary = function(employeesArray) {
   let totalSalary = 0;
 
   for(const employee of employeesArray){
-   
+  //  Converted the salary from a string to a number to be calculated
     let num = parseInt(employee.salary);
     totalSalary += num;
-    console.log(typeof(num));
   }
 
   const avgSalary= totalSalary/employeesArray.length;
