@@ -3,13 +3,14 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 let employeesArray = [];
 
-let infoEmployee ={
+function dataInput(firstName, lastName, salary) {
 
-firstName: "",
-lastName: "",
-salary:0,
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.salary = salary;
 
-};
+}
+
 
 
 // Collect employee data
