@@ -17,12 +17,19 @@ function dataInput(firstName, lastName, salary) {
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
 
+  const askUser = confirm("Would you like ")
+
   const addFirstName = prompt("Enter First Name");
-  if (!addFirstName){
-    alert("Invalid input. Try again")
-    collectEmployees();
-  }
-  infoEmployee.firstName = addFirstName;
+  
+  const addLastName = prompt("Enter Last Name");
+
+  const addSalary = prompt("Enter your salary");
+
+  const personInfo = new dataInput(addFirstName, addLastName, +addSalary);
+
+  employeesArray.push(personInfo);
+  
+
 
 
 
