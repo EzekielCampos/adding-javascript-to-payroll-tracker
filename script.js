@@ -20,7 +20,7 @@ const collectEmployees = function() {
   // This variable will be used to give the user an option in the while loop to add more employees
   let askUser = confirm("Would you like enter an employee?");
 
-  while (confirm){
+  while (askUser){
     const addFirstName = prompt("Enter First Name");
     
     const addLastName = prompt("Enter Last Name");
@@ -30,6 +30,7 @@ const collectEmployees = function() {
     if(isNaN(addSalary)){
       +addSalary;
     }
+    // Object will hold a persons information to be placed into the array
     const personInfo = new dataInput(addFirstName, addLastName, addSalary);
 
   employeesArray.push(personInfo);
