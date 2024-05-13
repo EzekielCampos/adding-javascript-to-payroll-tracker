@@ -1,8 +1,10 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+// Array that will hold all the objects 
 let employeesArray = [];
 
+// Constructor function used to create an object to hold employee info
 function dataInput(firstName, lastName, salary) {
 
   this.firstName = firstName;
@@ -19,7 +21,7 @@ const collectEmployees = function() {
 
   // This variable will be used to give the user an option in the while loop to add more employees
   let askUser = confirm("Would you like enter an employee?");
-
+// This loop will continue until the user no longer wants to add an employee
   while (askUser){
     const addFirstName = prompt("Enter First Name");
     
@@ -45,12 +47,12 @@ return employeesArray;
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+
 
   let totalSalary = 0;
 
   for(const employee of employeesArray){
-  //  Converted the salary from a string to a number to be calculated
+  //  Converts salary from a string to a number to be calculated
     let num = parseInt(employee.salary);
     totalSalary += num;
   }
