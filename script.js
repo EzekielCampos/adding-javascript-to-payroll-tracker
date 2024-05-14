@@ -2,7 +2,7 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Array that will hold all the objects 
-let employeesArray = [];
+// let employeesArray = [];
 
 // Constructor function used to create an object to hold employee info
 function dataInput(firstName, lastName, salary) {
@@ -18,6 +18,9 @@ function dataInput(firstName, lastName, salary) {
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
+
+  // Array that will hold all the objects 
+let employeesArray = [];
 
   // This variable will be used to give the user an option in the while loop to add more employees
   let askUser = confirm("Would you like enter an employee?");
