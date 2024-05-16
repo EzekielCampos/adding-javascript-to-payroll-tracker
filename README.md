@@ -14,6 +14,8 @@ This program can be used by employers to input and log their employees financial
 
 ### Link
 https://ezekielcampos.github.io/adding-javascript-to-payroll-tracker/
+### Screenshot 
+![alt text](./Assets/screenshot-browser.png)
 
 
 ## Credit
