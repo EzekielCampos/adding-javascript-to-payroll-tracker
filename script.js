@@ -1,20 +1,6 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Array that will hold all the objects 
-// let employeesArray = [];
-
-// Constructor function used to create an object to hold employee info
-function dataInput(firstName, lastName, salary) {
-
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.salary = salary;
-
-}
-
-
-
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
@@ -32,13 +18,11 @@ let employeesArray = [];
 
     const addSalary = prompt("Enter your salary");
     // Checks to see if a number was inputted, if not default be set to zero
-    if(isNaN(addSalary)){
+    if(Number.isNaN(addSalary)){
       addSalary = 0;
     }
     // Object will hold a persons information to be placed into the array
-    const personInfo = new dataInput(addFirstName, addLastName, addSalary);
-
-  employeesArray.push(personInfo);
+  employeesArray.push({firstName:addFirstName, lastName:addLastName, salary:addSalary});
   
   askUser = confirm("Would you like to enter another employee?");
 
