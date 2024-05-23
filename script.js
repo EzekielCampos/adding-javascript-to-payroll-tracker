@@ -18,9 +18,12 @@ let employeesArray = [];
     
     const addLastName = prompt("Enter Last Name");
 
-    const addSalary = prompt("Enter your salary");
+    let addSalary = prompt("Enter your salary");
+
+  
+
     // Checks to see if a number was inputted, if not default be set to zero
-    if(Number.isNaN(addSalary)){
+    if(isNaN(addSalary)){
       addSalary = 0;
     }
     // Object will hold a persons information to be placed into the array
@@ -58,7 +61,7 @@ const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 
   // This variable will hold a random employee information by using the Math methods
-  const randomEmployee = employeesArray[Math.round(Math.random()*(employeesArray.length -1))];
+  const randomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];
   console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 
 }
